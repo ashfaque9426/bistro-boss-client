@@ -20,9 +20,11 @@ const Dashboard = () => {
             </Helmet>
             <div className="drawer drawer-mobile">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-                <div className="drawer-content flex flex-col items-center justify-center">
+                <div className="drawer-content">
+                    <div className='text-center'>
+                        <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+                    </div>
                     <Outlet />
-                    <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
 
                 </div>
                 <div className="drawer-side bg-[#D1A054]">
@@ -32,7 +34,7 @@ const Dashboard = () => {
                             isAdmin ? <>
                                 <li><NavLink to='/dashboard/home'><FaHome /> Admin Home</NavLink></li>
                                 <li><NavLink to='/dashboard/addItem'><FaUtensils /> Add Items</NavLink></li>
-                                <li><NavLink to='/dashboard/history'><FaWallet />Manage Items</NavLink></li>
+                                <li><NavLink to='/dashboard/manageItems'><FaWallet />Manage Items</NavLink></li>
                                 <li><NavLink to='/dashboard/history'><FaBook />Manage Bookings</NavLink></li>
                                 <li><NavLink to='/dashboard/allusers'><FaUsers />All Users</NavLink></li>
                                 
