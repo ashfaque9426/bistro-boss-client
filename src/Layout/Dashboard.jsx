@@ -32,14 +32,14 @@ const Dashboard = () => {
                     <ul className="menu p-4 w-80">
                         {
                             isAdmin ? <>
-                                <li><NavLink to='/dashboard/home'><FaHome /> Admin Home</NavLink></li>
+                                <li><NavLink to='/dashboard/adminHome'><FaHome /> Admin Home</NavLink></li>
                                 <li><NavLink to='/dashboard/addItem'><FaUtensils /> Add Items</NavLink></li>
                                 <li><NavLink to='/dashboard/manageItems'><FaWallet />Manage Items</NavLink></li>
                                 <li><NavLink to='/dashboard/history'><FaBook />Manage Bookings</NavLink></li>
                                 <li><NavLink to='/dashboard/allusers'><FaUsers />All Users</NavLink></li>
                                 
                             </> : <>
-                                <li><NavLink to='/dashboard/home'><FaHome /> User Home</NavLink></li>
+                                <li><NavLink to='/dashboard/userHome'><FaHome /> User Home</NavLink></li>
                                 <li><NavLink to='/dashboard/reservations'><FaCalendarAlt /> Reservation</NavLink></li>
                                 <li><NavLink to='/dashboard/history'><FaWallet />Payment History</NavLink></li>
                                 <li><NavLink to='/dashboard/mycart'><FaShoppingCart /> My Cart <span className="badge badge-secondary">+{cart?.length || 0}</span></NavLink></li>

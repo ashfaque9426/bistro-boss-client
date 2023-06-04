@@ -23,7 +23,7 @@ const SignUp = () => {
             updateUserProfile(data.name, data.photoURL)
             .then(() => {
                 console.log("User profile info updated");
-                fetch('http://localhost:5000/users', {
+                fetch('https://bistro-boss-server-sooty.vercel.app/users', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'

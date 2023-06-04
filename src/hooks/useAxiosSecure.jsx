@@ -3,13 +3,13 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import useAuth from './useAuth';
 
+const axiosSecure = axios.create({
+    baseURL: 'https://bistro-boss-server-sooty.vercel.app', // Replace with your base URL
+});
+
 const useAxiosSecure = () => {
     const navigate = useNavigate();
     const { logOut } = useAuth()
-
-    const axiosSecure = axios.create({
-        baseURL: 'http://localhost:5000', // Replace with your base URL
-    });
 
     useEffect(() => {
         axiosSecure.interceptors.request.use((config) => {

@@ -13,7 +13,7 @@ const useCart = () => {
         // to prevent api calls before getting jwt token enabled: !loading is used
         enabled: !loading,
         // queryFn: async () => {
-        //     const response = await fetch(`http://localhost:5000/carts?email=${user?.email}`, {
+        //     const response = await fetch(`https://bistro-boss-server-sooty.vercel.app/carts?email=${user?.email}`, {
         //         headers: {
         //             authorization: `bearer ${token}`
         //         }
@@ -22,7 +22,7 @@ const useCart = () => {
         // },
         queryFn: async () => {
             const response = await axiosSecure(`/carts?email=${user?.email}`)
-            console.log('response from axios', response)
+            // console.log('response from axios', response)
             return response.data;
         },
     })
